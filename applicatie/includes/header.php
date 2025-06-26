@@ -25,6 +25,13 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
     <!-- Header voor klanten of niet-ingelogde bezoekers -->
     <header class="header">
         <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
+
+        <div class="search-bar">
+            <input type="text" placeholder="Zoeken...">
+            <button type="submit">Zoek</button>
+        </div>
+
+
         <div class="header-button">
             <a href="bestelling.php">
                 <img src="afbeeldingen/winkelmandje.png" alt="Bestelling"> Bestelling
