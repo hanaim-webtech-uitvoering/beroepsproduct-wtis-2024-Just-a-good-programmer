@@ -41,13 +41,6 @@ if ($_SESSION['role'] === 'Client' && $huidigePagina !== 'profiel_klant.php') {
     <main>
     <div class='content-container'>
     
-    
-    <button class="button">
-        <a href="inloggen.php">Inloggen</a>
-    </button>
-    <button class="button">
-        <a href="registreren.php">Registreren</a>
-    </button>
 
     <button class="button">
         <a href="uitloggen.php">Uitloggen</a>

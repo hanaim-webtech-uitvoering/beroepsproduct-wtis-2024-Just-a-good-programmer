@@ -1,6 +1,8 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $huidigePagina = basename($_SERVER['PHP_SELF']); 
 
@@ -30,18 +32,10 @@ if (isset($_SESSION['username'])) {
 <body>
     <?php include 'includes/header.php'; ?>
 
-    <div class="container">
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
-    <aside class="sidebar">
-        <nav>
-            <a href="hoofdpagina_klanten.php">Home</a>
-            <a href="producten.php" >Menu</a>
-            <a href="profiel.php">Profiel</a>
-            <a href="bestelling.php" >Bestelling</a>
-        </nav>
-    </aside>
+    <?php include 'includes/sidebar.php'; ?>
     <main>
     <div class='content-container'>
     
@@ -53,14 +47,11 @@ if (isset($_SESSION['username'])) {
         <a href="registreren.php">Registreren</a>
     </button>
 
-    <button class="button">
-        <a href="uitloggen.php">Uitloggen</a>
-    </button>
+    
     </div>
     
     
     </main>
-    </div>
     <?php include 'includes/footer.php'; ?>
 </body>
 </html>

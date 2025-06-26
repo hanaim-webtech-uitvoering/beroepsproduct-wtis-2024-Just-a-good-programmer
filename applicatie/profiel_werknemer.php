@@ -45,13 +45,6 @@ $huidigePagina = basename($_SERVER['PHP_SELF']);
     <main>
     <div class='content-container'>
     
-    
-    <button class="button">
-        <a href="inloggen.php">Inloggen</a>
-    </button>
-    <button class="button">
-        <a href="registreren.php">Registreren</a>
-    </button>
 
     <button class="button">
         <a href="uitloggen.php">Uitloggen</a>
