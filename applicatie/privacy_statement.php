@@ -10,17 +10,7 @@
 
 <body>
     <?php include 'includes/header.php'; ?>
-    <label class="hamburger-menu">
-        <input type="checkbox">
-    </label>
-    <aside class="sidebar">
-        <nav>
-            <a href="Hoofdpagina_klanten.php">Home </a>
-            <a href="producten.php" >Menu</a>
-            <a href="profiel.php">Profiel</a>
-            <a href="winkelwagen.php" >Bestelling</a>
-        </nav>
-    </aside>
+    
     <h1>Privacyverklaring Sole Machina</h1>
 
     <p>Sole Machina, gevestigd aan Professor Molkenboerstraat 3, is verantwoordelijk voor de verwerking van persoonsgegevens zoals weergegeven in deze privacyverklaring.</p>
