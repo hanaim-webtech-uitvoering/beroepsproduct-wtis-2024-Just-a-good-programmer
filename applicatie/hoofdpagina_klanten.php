@@ -50,6 +50,9 @@ session_start();
         <main>
         <div class="content">
             <h1>Welkom bij Pizzeria Sole Machina </h1>
+            <p> Bij Pizzeria Sole Machina draait alles om passie, vakmanschap en de pure liefde voor écht Italiaans eten. 
+                Onze steenoven staat dagelijks te gloeien om jou te verwennen met ambachtelijke pizza’s,
+                 rijkelijk belegd met verse ingrediënten en gebakken tot in perfectie.</p>
         </div>
         </main>
     </div>
