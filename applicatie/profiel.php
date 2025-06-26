@@ -31,25 +31,23 @@ if (isset($_SESSION['username'])) {
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
-
+    <div class=container>
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
     <?php include 'includes/sidebar.php'; ?>
     <main>
     <div class='content-container'>
-    
-    
+
     <button class="button">
         <a href="inloggen.php">Inloggen</a>
     </button>
     <button class="button">
         <a href="registreren.php">Registreren</a>
     </button>
-
     
     </div>
-    
+    </div>
     
     </main>
     <?php include 'includes/footer.php'; ?>
