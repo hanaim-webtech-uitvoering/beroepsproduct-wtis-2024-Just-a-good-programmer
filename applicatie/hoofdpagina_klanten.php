@@ -40,15 +40,9 @@ if (session_status() === PHP_SESSION_NONE) {
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
-    
-        <aside class="sidebar">
-            <nav>
-                <a href="hoofdpagina_klanten.php">Home</a>
-                <a href="producten.php" >Menu</a>
-                <a href="profiel.php">Profiel</a>
-                <a href="bestelling.php" >Bestelling</a>
-            </nav>
-        </aside>
+    <?php include 'includes/sidebar.php'; ?>
+
+       
         <main>
         <div class="content">
             <h1>Welkom bij Pizzeria Sole Machina </h1>
