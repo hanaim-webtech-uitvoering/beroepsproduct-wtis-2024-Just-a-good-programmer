@@ -16,14 +16,7 @@
         <input type="checkbox">
     </label>
 
-    <aside class="sidebar">
-        <nav>
-            <a href="hoofdpagina_klanten.php">Home</a>
-            <a href="menu.php" >Menu</a>
-            <a href="profiel.php">Profiel</a>
-            <a href="bestelling.php" >Bestelling</a>
-        </nav>
-    </aside>
+    <?php include 'includes/sidebar.php'; ?>
     
     <main>
     <div class="main-container">

@@ -1,5 +1,7 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
  if (isset($_GET['q'])) {
     $search_term = $_GET['q'];
@@ -51,14 +53,12 @@ session_start();
         <div class="content">
             <h1>Welkom bij Pizzeria Sole Machina </h1>
             <p> Bij Pizzeria Sole Machina draait alles om passie, vakmanschap en de pure liefde voor écht Italiaans eten. 
-                Onze steenoven staat dagelijks te gloeien om jou te verwennen met ambachtelijke pizza’s,
+                Onze steenoven staat dagelijks te gloeien om jou te verwennen met ambachtelijke pizzas,
                  rijkelijk belegd met verse ingrediënten en gebakken tot in perfectie.</p>
         </div>
         </main>
     </div>
 </body>
-<footer>
-    <a href="privacy_statement.php">Privacyverklaring</a>
-</footer>
+<?php include 'includes/footer.php'; ?>
 
 </html>

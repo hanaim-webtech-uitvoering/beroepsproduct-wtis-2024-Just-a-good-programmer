@@ -22,18 +22,8 @@ $statement ;
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
-    <div class="container">
-    <label class="hamburger-menu">
-        <input type="checkbox">
-    </label>
-    <aside class="sidebar">
-        <nav>
-            <a href="hoofdpagina_klanten.php">Home</a>
-            <a href="producten.php" >Menu</a>
-            <a href="profiel.php">Profiel</a>
-            <a href="bestelling.php" >Bestelling</a>
-        </nav>
-    </aside>
+    <?php include 'includes/sidebar.php'; ?>
+    
     
     
     <div class="search-bar">

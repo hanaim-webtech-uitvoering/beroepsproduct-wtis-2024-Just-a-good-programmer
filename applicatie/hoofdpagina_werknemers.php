@@ -1,5 +1,7 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -19,13 +21,7 @@ session_start();
             <input type="checkbox">
         </label>
 
-        <aside class="sidebar">
-            <nav>
-                <a href="hoofdpagina_werknemers.php">Home</a>
-                <a href="profiel.php">Profiel</a>
-                <a href="Bezorgschema.php">Bezorgschema</a>
-            </nav>
-        </aside>
+        <?php include 'includes/sidebar.php'; ?>
 
 
         <div class="content">
