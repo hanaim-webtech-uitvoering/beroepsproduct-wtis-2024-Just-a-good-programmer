@@ -1,5 +1,5 @@
 <?php
-require_once 'db_conectie';
+require_once __DIR__ . '/datalaag/db_connectie.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -22,6 +22,10 @@ $statement ;
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
+    <div class=container>
+    <label class="hamburger-menu">
+        <input type="checkbox">
+    </label>
     <?php include 'includes/sidebar.php'; ?>
     
     
@@ -30,19 +34,19 @@ $statement ;
     <div class="search-container">
     <form action="inloggen.php" method="POST">
         <label for="voornaam">Voornaam: </label>
-        <input type="text" placeholder="voornaam">
+        <input type="text" placeholder="Voornaam">
         <label for="voornaam">Achternaam: </label>
-        <input type="text" placeholder="achternaam">
+        <input type="text" placeholder="Achternaam">
         <label for="voornaam">Gebruikersnaam: </label>
-        <input type="text" placeholder="gebruikersnaam">
+        <input type="text" placeholder="Gebruikersnaam">
         <label for="voornaam">Wachtwoord: </label>
-        <input type="text" placeholder="wachtwoord">
+        <input type="text" placeholder="Wachtwoord">
         <label for="voornaam">Wachtwoord opnieuw: </label>
-        <input type="text" placeholder="wachtwoord">
+        <input type="text" placeholder="Wachtwoord">
         <label for="role">Soort account: </label>
         <select name="role" id="role">
             <option value="Client">Klant</option>
-            <option value="Personnel">Werknemer</option>
+            <option value="Personnel">Personeel</option>
         <button type="submit">Registreren</button>
         </form>
     </div>
