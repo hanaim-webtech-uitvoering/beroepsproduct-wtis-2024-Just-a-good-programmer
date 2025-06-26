@@ -1,5 +1,6 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
 
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
