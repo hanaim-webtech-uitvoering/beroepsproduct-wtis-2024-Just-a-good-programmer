@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <nav>
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'): ?>
             <a href="hoofdpagina_werknemer.php">Home</a>
-            <a href="profiel_werknemer.php">Profiel</a>
+            <a href="profiel.php">Profiel</a>
             <a href="bezorgschema.php">Bezorgschema</a>
         <?php else: ?>
             <a href="hoofdpagina_klanten.php">Home</a>
