@@ -5,9 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 ?>
 
 <aside class="sidebar">
-    <label class="hamburger-menu">
-        <input type="checkbox">
-    </label>
+    
     <nav>
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'): ?>
             <a href="hoofdpagina_werknemer.php">Home</a>
