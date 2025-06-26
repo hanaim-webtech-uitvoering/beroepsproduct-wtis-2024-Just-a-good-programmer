@@ -1,13 +1,10 @@
 <?php
-if (__FILE__ == realpath($_SERVER['SCRIPT_FILENAME'])) {
-    header("Location: menu.php"); // redirect to homepage
-    exit;
-}
 
 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
 ?>
     <!-- Header voor werknemers -->
     <header class="header-werknemers">
+        <?php include 'includes/sidebar.php'; ?>
         <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
         <div class="search-bar">
             <input type="text" placeholder="Zoeken...">
