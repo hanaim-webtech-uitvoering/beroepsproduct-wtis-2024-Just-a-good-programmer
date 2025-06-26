@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
 
-
+session_start();
 
 $huidigePagina = basename($_SERVER['PHP_SELF']); 
 

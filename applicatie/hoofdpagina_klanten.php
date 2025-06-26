@@ -1,4 +1,5 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
+session_start();
 
  if (isset($_GET['q'])) {
     $search_term = $_GET['q'];
