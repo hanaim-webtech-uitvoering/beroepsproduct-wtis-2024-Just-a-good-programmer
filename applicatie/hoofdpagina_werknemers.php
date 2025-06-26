@@ -25,7 +25,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
         <div class="content">
-            <h1>Welkom bij Pizzeria Sole Machina werknemer</h1>
+            <h1>Welkom bij Pizzeria Sole Machina personeelslid!</h1>
+            <p>U kunt uw bezorgingen checken bij op uw profiel en het bezorgingschema bij bezorgingschema.</p>
         </div>
 
     </div>
