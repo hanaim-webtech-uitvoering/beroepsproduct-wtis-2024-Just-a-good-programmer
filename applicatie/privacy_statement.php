@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <?php include 'includes/header.php'; ?>
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>

@@ -32,25 +32,7 @@ session_start();
     <link rel="stylesheet" href="styling_page.css">
 </head>
 <body>
-    <div class="header-container">
-    <header class="header">
-        <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
-        <div class="search-bar">
-        <form method="GET"> 
-            <input type="text" name="q" placeholder="Zoeken...">
-            <button type="submit">Zoek</button>
-        </form>
-        </div>
-
-        <div class="header-buttons">
-            <a href="bestelling.php">
-                <img src="afbeeldingen/winkelmandje.png" alt="Bestelling"> Bestelling
-            </a>
-            <a href="profiel.php">
-                <img src="afbeeldingen/user.png" alt="Account"> Account
-            </a>
-        </div>
-    </header>
+    <?php include 'includes/header.php'; ?>
     
     <div class="container">
     <label class="hamburger-menu">

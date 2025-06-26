@@ -3,6 +3,6 @@ session_unset();
 session_destroy(); 
 
 
-header("Location: profiel.php"); 
+header("Location: hoofdpagina_klanten.php"); 
 exit(); 
 ?>

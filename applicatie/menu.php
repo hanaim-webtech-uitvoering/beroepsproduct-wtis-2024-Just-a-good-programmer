@@ -9,21 +9,7 @@
     <link rel="stylesheet" href="styling_page.css">
 </head>
 <body>
-    <header class="header">
-        <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
-        <div class="search-bar">
-            <input type="text" placeholder="Zoeken...">
-            <button type="submit">Zoek</button>
-        </div>
-        <div class="header-buttons">
-            <a href="bestelling.php">
-                <img src="afbeeldingen/winkelmandje.png" alt="Bestelling"> Bestelling
-            </a>
-            <a href="profiel.php">
-                <img src="afbeeldingen/user.png" alt="Account"> Account
-            </a>
-        </div>
-    </header>
+    <?php include 'includes/header.php'; ?>
 
     <div class="container">
     <label class="hamburger-menu">
@@ -101,5 +87,7 @@
     </main>
 
 </div>
+
+<?php include 'includes/footer.php'; ?>
 </body>
 </html>

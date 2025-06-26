@@ -105,8 +105,6 @@ session_start();
 
     </div>
     </main>
-    <footer>
-        <a href="privacy_statement.php">Privacyverklaring</a>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>

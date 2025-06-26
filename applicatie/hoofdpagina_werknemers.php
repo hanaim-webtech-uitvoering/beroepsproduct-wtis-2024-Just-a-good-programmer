@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,44 +11,29 @@ session_start();
     <link rel="stylesheet" href="styling_page.css">
 </head>
 
-<header class="header">
-    <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
-    <div class="search-bar">
-        <input type="text" placeholder="Zoeken...">
-        <button type="submit">Zoek</button>
-    </div>
-    <div class="header-buttons">
-        <a href="Bezorgschema.php">
-            <img src="afbeeldingen/Orderlijst.png" alt="Orderlijst"> Orderlijst
-        </a>
-        <a href="profiel.php">
-            <img src="afbeeldingen/user.png" alt="Account"> Account
-        </a>
-    </div>
-</header>
+<<?php include 'includes/header.php'; ?>
+
 <body>
     <div class="container">
-    <label class="hamburger-menu">
-        <input type="checkbox">
-    </label>
+        <label class="hamburger-menu">
+            <input type="checkbox">
+        </label>
 
-    <aside class="sidebar">
-        <nav>
-            <a href="hoofdpagina_werknemers.php">Home</a>
-            <a href="profiel.php">Profiel</a>
-            <a href="Bezorgschema.php" >Bezorgschema</a>
-        </nav>
-    </aside>
-    
+        <aside class="sidebar">
+            <nav>
+                <a href="hoofdpagina_werknemers.php">Home</a>
+                <a href="profiel.php">Profiel</a>
+                <a href="Bezorgschema.php">Bezorgschema</a>
+            </nav>
+        </aside>
 
-    <div class="content">
-        <h1>Welkom bij Pizzeria Sole Machina werknemer</h1>
+
+        <div class="content">
+            <h1>Welkom bij Pizzeria Sole Machina werknemer</h1>
+        </div>
+
     </div>
-
-    </div>
-    </body>
-<footer>
-    <a href="privacy_statement.php">Privacyverklaring</a>
-</footer>
+</body>
+<?php include 'includes/footer.php'; ?>
 
 </html>

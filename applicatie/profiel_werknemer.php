@@ -1,5 +1,5 @@
 <?php require_once __DIR__ . '/datalaag/db_connectie.php';
-
+session_start();
 
 if (isset($_SESSION['username'])) {
     echo "Welkom, " . $_SESSION['username'] . "!" ;
@@ -30,21 +30,7 @@ $huidigePagina = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="styling_page.css">
 </head>
 <body>
-    <header class="header">
-        <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
-        <div class="search-bar">
-            <input type="text" placeholder="Zoeken...">
-            <button type="submit">Zoek</button>
-        </div>
-        <div class="header-buttons">
-            <a href="winkelmand.php">
-                <img src="afbeeldingen/winkelmandje.png" alt="Winkelmand"> Bestelling
-            </a>
-            <a href="profiel.php">
-                <img src="afbeeldingen/user.png" alt="Account"> Account
-            </a>
-        </div>
-    </header>
+    <?php include 'includes/header.php'; ?>
     <div class="container">
     <label class="hamburger-menu">
         <input type="checkbox">
@@ -75,8 +61,6 @@ $huidigePagina = basename($_SERVER['PHP_SELF']);
     
     </main>
     </div>
-    <footer>
-        <a href="privacy_statement.php">Privacyverklaring</a>
-    </footer>
+    <?php include 'includes/footer.php'; ?>
 </body>
 </html>
