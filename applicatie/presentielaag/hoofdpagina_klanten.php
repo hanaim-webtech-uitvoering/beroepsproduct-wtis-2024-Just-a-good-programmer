@@ -34,13 +34,13 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="styling_page.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
     
     <div class="container">
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
-    <?php include 'includes/sidebar.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/sidebar.php'; ?>
 
        
         <main>
@@ -53,6 +53,6 @@ if (session_status() === PHP_SESSION_NONE) {
         </main>
     </div>
 </body>
-<?php include 'includes/footer.php'; ?>
+<?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
 
 </html>

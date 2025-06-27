@@ -13,7 +13,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="styling_page.css">
 </head>
 
-<<?php include 'includes/header.php'; ?>
+<<?php include 'applicatie/applicatielaag/includes/header.php'; ?>
 
 <body>
     <div class="container">
@@ -21,7 +21,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <input type="checkbox">
         </label>
 
-        <?php include 'includes/sidebar.php'; ?>
+        <?php include 'applicatielaag/includes/sidebar.php'; ?>
 
 
         <div class="content">
@@ -31,6 +31,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
     </div>
 </body>
-<?php include 'includes/footer.php'; ?>
+<?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
 
 </html>

@@ -32,6 +32,21 @@ body{
     height: 50px;
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.error-message {
+    color: red;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -58,6 +73,56 @@ body{
     background-color: darkorange;
 }
 
+.input-bar {
+    display: flex;
+    align-items: center;
+}
+
+.input-bar input[type="text"] {
+    padding: 8px;
+    border: 2px solid orange;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.input-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    max-width: 400px;
+    
+    margin: auto;
+}
+
+.input-bar input[type="text"],
+.input-bar input[type="password"],
+.input-bar button,
+.input-bar select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-bar button,
+button {
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.input-bar button:hover,
+button[type="submit"]:hover {
+    background-color: darkorange;
+}
 
 .header-buttons {
     display: flex;

@@ -1,12 +1,14 @@
-<?php require_once __DIR__ . '/datalaag/db_connectie.php';
+<?php 
 
+require_once __DIR__ . '/datalaag/db_connectie.php';
+session_start();
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = trim($_POST["username"]);;
     $password = $_POST["password"];
-
+    $role = $_POST['role'];
 
     $gekozenRol = $_POST['role'] ?? '';
     $sql = "SELECT * FROM [User] WHERE username = :username AND role = :role";
@@ -18,13 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    if ($user) {
+    if (isset($user)) {
         if (password_verify($password, $user['password'])) {
-            session_start();
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
-        }
+        
         if ($user['role'] === 'Client') {
             header("Location: profiel_klant.php");
             exit();
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error_message = "Ongeldige gebruikersnaam of wachtwoord en/of verkeerd type account.";
     }
 }
-
+}
 
 ?>
 
@@ -51,44 +52,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
 
     <div class="container">
         <label class="hamburger-menu">
             <input type="checkbox">
         </label>
-        <?php include 'includes/sidebar.php'; ?>
+        <?php include 'applicatielaag/includes/sidebar.php'; ?>
         <main class="content">
             <h2>Log in</h2>
 
-            <div id="error-message" style="display: none;">
-                <?php if (isset($error_message)) {
-                    echo $error_message;
-                } ?>
+            <?php if (!empty($error_message)): ?>
+                <div class="error-message"><?= htmlspecialchars($error_message) ?></div>
+            <?php endif; ?>
+
+            <div class="input-bar">
+                <form method="POST">
+                    <label for="username">Gebruikersnaam:</label> <br>
+                    <input type="text" id="username" name="username" required><br><br>
+
+                    <label for="password">Wachtwoord:</label> <br>
+                    <input type="password" id="password" name="password" required> <br><br>
+
+
+                    <button type="submit" class="info-button">Inloggen</button>
+
+                </form>
             </div>
-
-            <form action="inloggen.php" method="POST">
-                <label for="username">Gebruikersnaam:</label> <br>
-                <input type="text" id="username" name="username" required><br><br>
-
-                <label for="password">Wachtwoord:</label> <br>
-                <input type="password" id="password" name="password" required> <br><br>
-
-
-                <label>Type account:</label> <br><br>
-                <label><input type="radio" name="keuze" value="Client" required> Klant</label>
-                <label><input type="radio" name="keuze" value="Personnel"> Werknemer</label><br><br>
-
-                <button type="submit" class="info-button">Inloggen</button>
     </div>
-    </form>
-
-
     </main>
 
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
 
 </body>
 

@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'applicatielaag/includes/header.php'; ?>
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
-    <?php include 'includes/sidebar.php'; ?>
+    <?php include 'applicatielaag/includes/sidebar.php'; ?>
     <h1>Privacyverklaring Sole Machina</h1>
 
     <p>Sole Machina, gevestigd aan Professor Molkenboerstraat 3, is verantwoordelijk voor de verwerking van persoonsgegevens zoals weergegeven in deze privacyverklaring.</p>

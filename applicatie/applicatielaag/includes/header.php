@@ -1,12 +1,10 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+
 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
 ?>
     <!-- Header voor werknemers -->
     <header class="header-werknemers">
-        <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
+        <img src="applicatielaag/afbeeldingen/Pizza-logo.png" alt="Logo">
         <div class="search-bar">
             <input type="text" placeholder="Zoeken...">
             <button type="submit">Zoek</button>
@@ -24,7 +22,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
 <?php else: ?>
     <!-- Header voor klanten of niet-ingelogde bezoekers -->
     <header class="header">
-        <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
+        <img src="applicatielaag/afbeeldingen/Pizza-logo.png" alt="Logo">
 
         <div class="search-bar">
             <input type="text" placeholder="Zoeken...">
@@ -33,11 +31,11 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
 
 
         <div class="header-button">
-            <a href="bestelling.php">
-                <img src="afbeeldingen/winkelmandje.png" alt="Bestelling"> Bestelling
+            <a href="applicatie/presentielaag/bestelling.php">
+                <img src="applicatielaag/afbeeldingen/winkelmandje.png" alt="Bestelling"> Bestelling
             </a>
-            <a href="profiel.php">
-                <img src="afbeeldingen/user.png" alt="Profiel"> Profiel
+            <a href="applicatie/presentielaag/profiel.php">
+                <img src="applicatielaag/afbeeldingen/user.png" alt="Profiel"> Profiel
             </a>
         </div>
     </header>

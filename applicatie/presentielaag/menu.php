@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="styling_page.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
 
     <div class="container">
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
 
-    <?php include 'includes/sidebar.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/sidebar.php'; ?>
     
     <main>
     <div class="main-container">
@@ -81,6 +81,6 @@
 
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
 </body>
 </html>

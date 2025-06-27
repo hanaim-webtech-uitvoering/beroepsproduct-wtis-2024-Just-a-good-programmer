@@ -55,12 +55,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
     <div class=container>
         <label class="hamburger-menu">
             <input type="checkbox">
         </label>
-        <?php include 'includes/sidebar.php'; ?>
+        <?php include 'applicatie/applicatielaag/includes/sidebar.php'; ?>
 
         <?php if (!empty($error)): ?>
             <div class="error-message"><?= htmlspecialchars($error) ?></div>
@@ -69,7 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php endif; ?>
 
     <main class="content">
-        <div class="search-bar">
+        <h2>Registreren</h2>
+        <div class="input-bar">
                 <form method="POST" action="registreren.php" >
                     <label for="first_name">Voornaam:</label>
                     <input type="text" id="first_name" name="first_name" placeholder="Voornaam" required>
@@ -89,13 +90,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <select name="role" id="role" required>
                         <option value="Client">Klant</option>
                         <option value="Personnel">Personeel</option>
-
+                    </select>
                         <button type="submit">Registreren</button>
                 </form>
         </div>
     </main>
     </div>
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
 </body>
 
 </html>
