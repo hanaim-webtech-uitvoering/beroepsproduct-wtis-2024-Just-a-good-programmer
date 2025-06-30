@@ -28,6 +28,21 @@ body{
     z-index: 1000;
 }
 
+.header-werknemers {
+    position: fixed;
+    top: 0;
+    left: 5rem;
+    width: 95%;
+    background-color: rgba(255, 143, 5, 0.897);
+    border-bottom: 4px solid orange;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
 .header img {
     height: 50px;
 }

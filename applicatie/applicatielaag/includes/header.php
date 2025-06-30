@@ -2,9 +2,10 @@
 
 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
 ?>
+
     <!-- Header voor werknemers -->
     <header class="header-werknemers">
-        <img src="../applicatielaag/afbeeldingen/Pizza-logo.png" alt="Logo">
+        <img src="afbeeldingen/Pizza-logo.png" alt="Logo">
         <div class="search-bar">
             <input type="text" placeholder="Zoeken...">
             <button type="submit">Zoek</button>
@@ -40,3 +41,4 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'Personnel'):
         </div>
     </header>
 <?php endif; ?>
+
