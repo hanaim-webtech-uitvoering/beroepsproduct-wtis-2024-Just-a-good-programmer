@@ -8,20 +8,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = trim($_POST["username"]);;
     $password = $_POST["password"];
-    $role = $_POST['role'];
+    
 
-    $gekozenRol = $_POST['role'] ?? '';
-    $sql = "SELECT * FROM [User] WHERE username = :username AND role = :role";
+    
+    $sql = "SELECT * FROM [User] WHERE username = :username";
     $stmt = $verbinding->prepare($sql);
     $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':role', $gekozenRol);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-
+    
+$hash = password_hash($user['password'], PASSWORD_DEFAULT);
 
     if (isset($user)) {
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($password, $hash))  {
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
