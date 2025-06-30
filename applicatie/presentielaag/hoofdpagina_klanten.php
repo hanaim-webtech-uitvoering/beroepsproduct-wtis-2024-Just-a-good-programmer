@@ -1,7 +1,9 @@
-<?php require_once '../datalaag/db_connectie.php';
+<?php 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+require_once '../datalaag/db_connectie.php';
+
 
  if (isset($_GET['q'])) {
     $search_term = $_GET['q'];
