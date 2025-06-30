@@ -1,14 +1,15 @@
 <?php
 
 session_start();
-require_once __DIR__ . '/datalaag/db_connectie.php';
+require_once '../datalaag/db_connectie.php';
 
 
 if (isset($_SESSION['username'])) {
-    echo "Welkom, " . $_SESSION['username'] . "!";
+    $username =  $_SESSION['username'];
+    echo "<p> Welkom,  $username! <p>";
 }
 
-var_dump($_SESSION['username']);
+$username =  $_SESSION['username'];
 $huidigePagina = basename($_SERVER['PHP_SELF']);
 
 if ($_SESSION['role'] === 'Client' && $huidigePagina !== 'profiel_klant.php') {
@@ -19,20 +20,20 @@ if ($_SESSION['role'] === 'Client' && $huidigePagina !== 'profiel_klant.php') {
     exit();
 }
 
-
-$sql_orderdata = "SELECT * FROM Pizza_Order WHERE username = $username ORDER BY datum DESC";
-$order_data = $conn->query($sql_orderdata);
+global $verbinding;
+$sql_orderdata = "SELECT * FROM Pizza_Order WHERE client_username = :username ORDER BY datetime DESC";
+$order_data = $verbinding->prepare($sql_orderdata);
+$order_data->bindParam(':username', $username);
+$order_data ->execute();
 
 while ($order_rij = $order_data->fetch()) {
 
-    $username = htmlspecialchars($order_rij['gebruiker']);
-    $bedrag = htmlspecialchars($order_rij['bedrag']);
-    $bezorger = 
-    $orderdatum = explode('-', $order_rij['orderdag']);
-    $orderjaar = $orderdatum[0];
-    $ordermaand = $orderdatum[1];
-    $orderdag = $orderdatum[2];
+    $client_username = htmlspecialchars($order_rij['client_username']);
+    $order_id = htmlspecialchars($order_rij['order_id']);
+    $bezorger = htmlspecialchars($order_rij['personnel_username']);
+    $orderdatum = htmlspecialchars($order_rij['datetime']);
 }
+
 
 ?>
 <!DOCTYPE html>
