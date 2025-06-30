@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . 'applicatie/datalaag/db_connectie.php';
+<?php require_once '../datalaag/db_connectie.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
