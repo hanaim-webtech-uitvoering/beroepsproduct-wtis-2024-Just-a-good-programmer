@@ -1,6 +1,6 @@
-<?php require_once '../datalaag/db_connectie.php';
+<?php 
 session_start();
-
+require_once '../datalaag/db_connectie.php';
 if (isset($_SESSION['username'])) {
     echo "Welkom, " . $_SESSION['username'] . "!" ;
 }
