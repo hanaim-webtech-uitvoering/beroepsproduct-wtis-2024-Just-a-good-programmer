@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/datalaag/db_connectie.php'; ?>
+<?php require_once '../datalaag/db_connectie.php'; ?>
 
 <!DOCTYPE html>
 <html lang="nl">
@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producten</title>
-    <link rel="stylesheet" href="styling_page.css">
+    <link rel="stylesheet" href="../applicatielaag/styling_page.css">
 </head>
 <body>
-    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
+    <?php include '../applicatielaag/includes/header.php'; ?>
 
     <div class="container">
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
 
-    <?php include 'applicatie/applicatielaag/includes/sidebar.php'; ?>
+    <?php include '../applicatielaag/includes/sidebar.php'; ?>
     
     <main>
     <div class="main-container">
@@ -46,7 +46,7 @@
             foreach ($result as $row) {
                 echo "<div class='gerecht'>";
                 echo "<div class='box'>" . htmlspecialchars($row["categorie"]) . "</div>";
-                echo "<img src='afbeeldingen/" . htmlspecialchars($row["name"]) . ".jpg' alt='" . htmlspecialchars($row["name"]) . "' class='image'>";
+                echo "<img src='../applicatielaag/afbeeldingen/" . htmlspecialchars($row["name"]) . ".jpg' alt='" . htmlspecialchars($row["name"]) . "' class='image'>";
                 echo "<div class='box'>" . htmlspecialchars($row["name"]) . "</div>";
                 echo "<div class='box'>€" . number_format($row["price"], 2) . "</div>";
                 echo "<div class='button-container'>";
@@ -81,6 +81,6 @@
 
 </div>
 
-<?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
+<?php include '../applicatielaag/includes/footer.php'; ?>
 </body>
 </html>

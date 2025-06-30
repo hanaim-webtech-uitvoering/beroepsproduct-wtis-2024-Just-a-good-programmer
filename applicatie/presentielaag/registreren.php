@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/datalaag/db_connectie.php';
+require_once '../datalaag/db_connectie.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -51,16 +51,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren</title>
-    <link rel="stylesheet" href="styling_page.css">
+    <link rel="stylesheet" href="../applicatielaag/styling_page.css">
 </head>
 
 <body>
-    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
+    <?php include '../applicatielaag/includes/header.php'; ?>
     <div class=container>
         <label class="hamburger-menu">
             <input type="checkbox">
         </label>
-        <?php include 'applicatie/applicatielaag/includes/sidebar.php'; ?>
+        <?php include '../applicatielaag/includes/sidebar.php'; ?>
 
         <?php if (!empty($error)): ?>
             <div class="error-message"><?= htmlspecialchars($error) ?></div>
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
     </div>
-    <?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
+    <?php include '../applicatielaag/includes/footer.php'; ?>
 </body>
 
 </html>

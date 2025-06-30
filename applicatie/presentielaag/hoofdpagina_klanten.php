@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/datalaag/db_connectie.php';
+<?php require_once __DIR__ . 'applicatie/datalaag/db_connectie.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -31,16 +31,16 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzaria Sole Machina</title>
-    <link rel="stylesheet" href="styling_page.css">
+    <link rel="stylesheet" href="../applicatielaag/styling_page.css">
 </head>
 <body>
-    <?php include 'applicatie/applicatielaag/includes/header.php'; ?>
+    <?php include '../applicatielaag/includes/header.php'; ?>
     
     <div class="container">
     <label class="hamburger-menu">
         <input type="checkbox">
     </label>
-    <?php include 'applicatie/applicatielaag/includes/sidebar.php'; ?>
+    <?php include '../applicatielaag/includes/sidebar.php'; ?>
 
        
         <main>
@@ -53,6 +53,6 @@ if (session_status() === PHP_SESSION_NONE) {
         </main>
     </div>
 </body>
-<?php include 'applicatie/applicatielaag/includes/footer.php'; ?>
+<?php include '../applicatielaag/includes/footer.php'; ?>
 
 </html>
